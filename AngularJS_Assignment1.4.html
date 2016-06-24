@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJS_Assignment1.4</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+	<script type="text/javascript">
+		var mod=angular.module("myAPP",[]);
+		
+		mod.controller("CTR1",function($scope){
+			$scope.var=" C 1 ";
+		});
+		mod.controller("CTR2",function($scope){
+			$scope.var=" C 2";
+		});
+				
+	</script>
+</head>
+<body>
+	<div ng-app="myAPP">
+	
+		<div ng-controller="CTR1">
+			<p><b> Controller 1 Variable</b> : {{var}} </p>
+		</div>
+		<div ng-controller="CTR2">
+			<p><b> Controller 2 Variable : </b> {{var}} </p>
+		</div>
+
+	</div>
+
+
+</body>
+</html>

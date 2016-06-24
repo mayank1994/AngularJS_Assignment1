@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> AngularJS_Assignment1.3</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+	<script type="text/javascript">
+		var mod= angular.module("myAPP",[]);
+		mod.controller("myCTR",function($scope){
+			$scope.firstprog="Hello World";
+		});
+		
+	</script>
+</head>
+
+<body>
+	<div ng-app="myAPP" ng-controller="myCTR">
+		{{ firstprog }}
+	</div>
+
+</body>
+</html>

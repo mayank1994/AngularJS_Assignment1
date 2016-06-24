@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> AngularJS_Assignment1.6,7,8</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+
+	<script type="text/javascript">
+		var mod=angular.module("myAPP",[]);
+		mod.controller("CTR",function($scope){
+			$scope.Name="Mayank Verma";
+			$scope.clickfun=function(){
+				alert("Single click Registered");
+			}
+			$scope.dblclickfun=function(){
+				alert("Double Click Registered");
+			}
+		});
+	</script>
+</head>
+
+<body>
+	<div ng-app="myAPP" ng-controller="CTR">
+		
+		<h3> Single Click Event </h3>
+		<button ng-click="clickfun()">Click this button once!!!</button> <br> <br>
+
+		<h3> Double Click Event </h3>
+		<button ng-dblclick="dblclickfun()">Clickthis button twice!!!</button><br><br>
+
+		<h3> Value of scope inside view.</h3>
+		<u><p ng-bind="Name"></p> </u>
+
+	</div>
+
+</body>
+</html>

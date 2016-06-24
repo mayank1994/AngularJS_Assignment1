@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> AngularJS_Assignment1.5</title>
+	
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+	<script type="text/javascript">
+		var mod=angular.module("myapp",[]);
+		mod.controller("con",function($scope){
+			$scope.person={ Name: "Mayank Verma" , EmployeeID:"2012057" , Designation:"SDE"};
+		});
+		
+	</script>
+</head>
+<body class="container">
+	<div ng-app="myapp" ng-controller="con">
+
+	<p> Name: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input ng-model="person.Name"></p>
+	<p> EmployeeID: <input ng-model="person.EmployeeID"></p>
+	<p> Designation: <input ng-model="person.Designation"></p>
+
+
+
+	</div>
+
+</body>
+</html>

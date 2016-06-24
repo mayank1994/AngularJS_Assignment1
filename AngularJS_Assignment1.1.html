@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AngularJS_Assignment1.1</title>
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+
+	<script type="text/javascript">
+		var mod=angular.module("myApp",[]);
+		mod.controller("MyCtrl",function($scope){
+			$scope.person={
+				Name:" " , Email: " "
+			};
+		});
+	</script>
+</head>
+
+
+<body class="container">
+	<div ng-app="myApp" ng-controller="MyCtrl">
+		<form action="#">
+			Name : <input type="text" placeholder="Enter Name" ng-model="person.name"></input><br><br>
+			Email : <input type="text" placeholder="Enter Email" ng-model="person.email"> </input><br><br>
+			<input type="Submit"> </input><br> <br>
+		</form>
+
+		<table class="table table-hover" border="1px solid black">
+			<thead>
+				<th> USER DETAILS </th>
+				<th> VALUES </th>
+
+			</thead>
+			<tbody>
+				<tr>
+					<td ng-bind="person.name"> &nbsp </td>
+					<td ng-bind="person.email"> &nbsp </td>
+				</tr>
+
+			</tbody>
+		</table>
+
+	</div>
+</body>
+</html>
